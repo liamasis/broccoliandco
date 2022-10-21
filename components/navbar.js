@@ -6,10 +6,12 @@ import styles from '../styles/Home.module.css'
 function Navbar() { 
   return (
     <nav className={styles.navigation}>
-        <Menu>
-        <a id="home" className="menu-item" href="/">Home</a>
-        </Menu>
-        <button className="burgerMenu">Menu</button>
+      <div id="outer-container">
+        <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
+          <main id="page-wrap">
+            <h1>Logo</h1>
+          </main>
+      </div>
     </nav>
   );
 }
