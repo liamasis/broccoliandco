@@ -1,9 +1,15 @@
 import Head from 'next/head'
-import Trigger from '../components/triggerbutton';
+import Modal from '../components/Modal';
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar.js'
-import PopForm from '../components/popform.js'
+import React, { useState } from 'react';
+
+
+
 export default function Home() {
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,11 +20,13 @@ export default function Home() {
       <Navbar />
       <main className={styles.main}>
         <h1>Broccoli & Co</h1>
-        {/*<PopForm triggerText={'well'} onSubmit={onSubmit} />*/}
-        <Trigger 
-          showModal={true}
-          triggerText={'Log in'}
-        />
+        <button onClick={() => setShowModal(true)}>Open Modal</button>
+            <Modal
+                onClose={() => setShowModal(false)}
+                show={showModal}
+            >
+                Hello from the modal!
+            </Modal>
       </main>
 
       <footer className={styles.footer}>
