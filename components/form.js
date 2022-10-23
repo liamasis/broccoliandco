@@ -13,13 +13,27 @@ function Form() {
     event.preventDefault();
     const data = {
       name: event.target.name.value,
-      email: event.target.email.value,
+      email: event.target.email.value
     }
 
+    LoginUser(data);
+    /* const iName = event.target.name.value
+    const iEmail = event.target.email.value
+    const iConfirmemail = event.target.confirmemail.value
     
-    console.log(data);
-    LoginUser( data );
-  }
+    console.log(iName);
+    if (iEmail !== iConfirmemail) {
+      alert('Emails do not match');
+      } else if (iName.length < 3) {
+        alert('Full name needs to be at least 3 characters long');
+      } else {
+        let data = {
+          name: iName,
+          email: iEmail
+        }
+        LoginUser(data);
+      } */
+    }
 
 
      return (
