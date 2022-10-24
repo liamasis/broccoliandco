@@ -20,7 +20,7 @@ export default function Home() {
       <Navbar />
       <main className={styles.main}>
         <h1>Broccoli & Co</h1>
-        <button onClick={() => setShowModal(true)}>Open Modal</button>
+        <button onClick={() => setShowModal(true)}>Join our Mailing List</button>
             <Modal
                 onClose={() => setShowModal(false)}
                 show={showModal}

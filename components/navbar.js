@@ -8,7 +8,7 @@ function Navbar() {
     <nav className={styles.navigation}>
       <div id="outer-container">
         <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
-          <main id="page-wrap">
+          <main>
             <h1>Logo</h1>
           </main>
       </div>

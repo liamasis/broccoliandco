@@ -1,9 +1,8 @@
-import axios from 'axios';
 import qs from 'qs';
 
 export const LoginUser = async ( data ) => {
     const url = 'https://us-central1-blinkapp-684c1.cloudfunctions.net/fakeAuth'; 
-    console.log(data);
+    
     const options = {
         method: 'POST',
         headers: { 
@@ -12,9 +11,22 @@ export const LoginUser = async ( data ) => {
         },
         body: qs.stringify(data),
     };
-    console.log(options);
-    const response = await fetch(url, options);
-    console.log(response);
+    
+    const response = await fetch(url, options).then(
+        res => {
+            switch(res.status) {
+                case 200:
+                    //Status Ok!
+                    alert('Your email address has been added to our mailing list')
+                    break;
+                case 400:
+                    //Status Fail
+                    alert('Error, your email has not been added to our list')                    
+                    break;
+        }
+    }
+    );
+   
 }
 
 export default LoginUser;

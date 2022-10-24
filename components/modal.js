@@ -23,7 +23,7 @@ const Modal = ({ show, onClose, children, title }) => {
             x
           </a>
         </StyledModalHeader>
-        {title && <StyledModalTitle>{title}</StyledModalTitle>}
+        {title && <title>{title}</title>}
         <StyledModalBody><Form /></StyledModalBody>
       </StyledModal>
     </StyledModalOverlay>
@@ -40,6 +40,11 @@ const Modal = ({ show, onClose, children, title }) => {
 };
 
 const StyledModalBody = styled.div`
+  display: flex;
+  justify-content: center;
+  alight-items: center;
+  height:100%;
+  width:100%;
   padding-top: 10px;
 `;
 
@@ -51,8 +56,8 @@ const StyledModalHeader = styled.div`
 
 const StyledModal = styled.div`
   background: white;
-  width: 500px;
-  height: 600px;
+  width: 250px;
+  height: 300px;
   border-radius: 15px;
   padding: 15px;
 `;

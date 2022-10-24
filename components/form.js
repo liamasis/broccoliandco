@@ -1,27 +1,16 @@
 import LoginUser from '../helpers/auth'
 import React from 'react';
-import { useState } from 'react';
+import styles from '../styles/FormStyle.module.css';
 
 function Form() {
 
- /*  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [confirmEmail, setConfirmEmail] = useState('');
-   */
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = {
-      name: event.target.name.value,
-      email: event.target.email.value
-    }
-
-    LoginUser(data);
-    /* const iName = event.target.name.value
-    const iEmail = event.target.email.value
-    const iConfirmemail = event.target.confirmemail.value
     
-    console.log(iName);
+    const iName = event.target.name.value;
+    const iEmail = event.target.email.value;
+    const iConfirmemail = event.target.confirmemail.value;
+    
     if (iEmail !== iConfirmemail) {
       alert('Emails do not match');
       } else if (iName.length < 3) {
@@ -32,40 +21,35 @@ function Form() {
           email: iEmail
         }
         LoginUser(data);
-      } */
+      }
     }
 
 
      return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <input className="form-control" id="name" defaultValue="test"/>
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          placeholder="name@example.com"
-          defaultValue="test@hot"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Confirm Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="confirmemail"
-          placeholder="name@example.com"
-          defaultValue="test@hot"
-        />
-      </div>
-      <div className="form-group">
-        <button className="form-control btn btn-primary" type="submit">
-          Submit
-        </button>
+    <form onSubmit={handleSubmit} className={styles.mainF}>
+      <div>
+        <div className={styles.forminput}>
+          <input id="name" placeholder="Full name"/>
+        </div>
+        <div className={styles.forminput}>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email address"
+          />
+        </div>
+        <div className={styles.forminput}>
+          <input
+            type="email"
+            id="confirmemail"
+            placeholder="Confirm email address"
+          />
+        </div>
+        <div className={styles.forminput}>
+          <button type="submit">
+            Submit
+          </button>
+        </div>
       </div>
     </form>
   )
