@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Form from './form'
+import styles from '../styles/Home.module.css'
 
 const Modal = ({ show, onClose, children, title }) => {
   const [isBrowser, setIsBrowser] = useState(false);
@@ -19,9 +20,8 @@ const Modal = ({ show, onClose, children, title }) => {
     <StyledModalOverlay>
       <StyledModal>
         <StyledModalHeader>
-          <a href="#" onClick={handleCloseClick}>
-            x
-          </a>
+          <Button className={styles} onClick={handleCloseClick}>Close</Button>
+          
         </StyledModalHeader>
         {title && <title>{title}</title>}
         <StyledModalBody><Form /></StyledModalBody>
@@ -73,4 +73,7 @@ const StyledModalOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
+
+
+`
 export default Modal;

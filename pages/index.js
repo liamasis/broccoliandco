@@ -4,8 +4,6 @@ import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar.js'
 import React, { useState } from 'react';
 
-
-
 export default function Home() {
 
   const [showModal, setShowModal] = useState(false);
@@ -19,7 +17,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <h1>Broccoli & Co</h1>
+        <h1>A better way to enjoy every day.</h1>
         <button onClick={() => setShowModal(true)}>Join our Mailing List</button>
             <Modal
                 onClose={() => setShowModal(false)}
