@@ -20,10 +20,9 @@ const Modal = ({ show, onClose, children, title }) => {
     <StyledModalOverlay>
       <StyledModal>
         <StyledModalHeader>
-          <Button className={styles} onClick={handleCloseClick}>Close</Button>
+          <button className={styles.buttonstyle} onClick={handleCloseClick}>Close</button>
           
         </StyledModalHeader>
-        {title && <title>{title}</title>}
         <StyledModalBody><Form /></StyledModalBody>
       </StyledModal>
     </StyledModalOverlay>
@@ -40,15 +39,17 @@ const Modal = ({ show, onClose, children, title }) => {
 };
 
 const StyledModalBody = styled.div`
+  
   display: flex;
   justify-content: center;
-  alight-items: center;
+  alight-items: flex-start;
   height:100%;
   width:100%;
   padding-top: 10px;
 `;
 
 const StyledModalHeader = styled.div`
+  position: relative;
   display: flex;
   justify-content: flex-end;
   font-size: 25px;
@@ -75,5 +76,5 @@ const StyledModalOverlay = styled.div`
 
 
 
-`
+
 export default Modal;

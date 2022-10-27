@@ -2,6 +2,7 @@ import LoginUser from '../helpers/auth'
 import React from 'react';
 import styles from '../styles/FormStyle.module.css';
 
+
 function Form() {
 
   const handleSubmit = async (event) => {
@@ -46,7 +47,7 @@ function Form() {
           />
         </div>
         <div className={styles.forminput}>
-          <button type="submit">
+          <button className={styles.buttonstyle}type="submit">
             Submit
           </button>
         </div>

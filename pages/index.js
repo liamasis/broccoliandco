@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       <main className={styles.main}>
         <h1>A better way to enjoy every day.</h1>
-        <button onClick={() => setShowModal(true)}>Join our Mailing List</button>
+        <button className={styles.buttonstyle} onClick={() => setShowModal(true)}>Join our Mailing List</button>
             <Modal
                 onClose={() => setShowModal(false)}
                 show={showModal}
