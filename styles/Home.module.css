@@ -4,7 +4,7 @@
   border-radius: 4px;
   color: #3c4043;
   cursor: pointer;
-  font-family: arial,sans-serif;
+  font-family: arial, sans-serif;
   font-size: 14px;
   height: 36px;
   line-height: 27px;
@@ -18,14 +18,14 @@
 }
 
 .buttonstyle:hover {
-border-color: #dadce0;
-box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
-color: #202124;
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+  color: #202124;
 }
 
 .buttonstyle:focus {
-border-color: #4285f4;
-outline: none;
+  border-color: #4285f4;
+  outline: none;
 }
 
 .main {
@@ -40,12 +40,11 @@ outline: none;
 
 .navigation {
   display: flex;
-  height:100%;
+  height: 6em;
   width: 100%;
   border-bottom: 1px solid #eaeaea;
   position: sticky;
   top: 0;
-  
 }
 .footer {
   display: flex;
@@ -55,10 +54,3 @@ outline: none;
   justify-content: center;
   align-items: center;
 }
-
-
-
-
-
-
-
