@@ -1,21 +1,15 @@
-import React from 'react';
-import Link from 'next/Link';
-import { slide as Menu } from 'react-burger-menu';
+import React from "react";
+import Burger from "./Burger";
+import styles from "../styles/Home.module.css";
 
-import styles from '../styles/Home.module.css'
-function Navbar() { 
+function Navbar() {
   return (
     <nav className={styles.navigation}>
       <div id="outer-container">
-        <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
-          <main>
-            <h1>Logo</h1>
-          </main>
+        <Burger />
       </div>
     </nav>
   );
 }
 
-
-
-export default Navbar
+export default Navbar;

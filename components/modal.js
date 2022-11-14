@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import Form from './form'
-import styles from '../styles/Home.module.css'
+import Form from "./form";
+import styles from "../styles/Home.module.css";
 
 const Modal = ({ show, onClose, children, title }) => {
   const [isBrowser, setIsBrowser] = useState(false);
@@ -20,10 +20,13 @@ const Modal = ({ show, onClose, children, title }) => {
     <StyledModalOverlay>
       <StyledModal>
         <StyledModalHeader>
-          <button className={styles.buttonstyle} onClick={handleCloseClick}>Close</button>
-          
+          <button className={styles.buttonstyle} onClick={handleCloseClick}>
+            Close
+          </button>
         </StyledModalHeader>
-        <StyledModalBody><Form /></StyledModalBody>
+        <StyledModalBody>
+          <Form />
+        </StyledModalBody>
       </StyledModal>
     </StyledModalOverlay>
   ) : null;
@@ -39,12 +42,11 @@ const Modal = ({ show, onClose, children, title }) => {
 };
 
 const StyledModalBody = styled.div`
-  
   display: flex;
   justify-content: center;
   alight-items: flex-start;
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
   padding-top: 10px;
 `;
 
@@ -73,8 +75,5 @@ const StyledModalOverlay = styled.div`
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
 `;
-
-
-
 
 export default Modal;
